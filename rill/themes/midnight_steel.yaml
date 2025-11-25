@@ -1,0 +1,125 @@
+# Theme YAML
+# Reference: https://docs.rilldata.com/reference/project-files/themes
+# "Midnight Steel" – cool blues + graphite neutrals
+
+type: theme
+
+light:
+  # Core brand colors
+  primary: "#1d4ed8"      # Strong blue
+  secondary: "#0ea5e9"    # Bright cyan accent
+
+  # Surfaces
+  background: "#f3f4f6"   # Cool light gray
+  surface: "#ffffff"
+  card: "#e5e7eb"
+
+  # Qualitative palette (24 colors)
+  color-qualitative-1: "#1d4ed8"   # Blue
+  color-qualitative-2: "#0ea5e9"   # Cyan
+  color-qualitative-3: "#22c55e"   # Green
+  color-qualitative-4: "#f97316"   # Orange
+  color-qualitative-5: "#9333ea"   # Purple
+  color-qualitative-6: "#ef4444"   # Red
+  color-qualitative-7: "#10b981"   # Emerald
+  color-qualitative-8: "#f59e0b"   # Amber
+  color-qualitative-9: "#3b82f6"   # Blue alt
+  color-qualitative-10: "#06b6d4"  # Cyan alt
+  color-qualitative-11: "#a855f7"  # Violet
+  color-qualitative-12: "#f43f5e"  # Rose
+  color-qualitative-13: "#2dd4bf"  # Teal
+  color-qualitative-14: "#84cc16"  # Lime
+  color-qualitative-15: "#e11d48"  # Crimson
+  color-qualitative-16: "#6366f1"  # Indigo
+  color-qualitative-17: "#fb7185"  # Rose soft
+  color-qualitative-18: "#fbbf24"  # Amber soft
+  color-qualitative-19: "#38bdf8"  # Sky
+  color-qualitative-20: "#4ade80"  # Green soft
+  color-qualitative-21: "#c4b5fd"  # Lavender
+  color-qualitative-22: "#14b8a6"  # Teal deep
+  color-qualitative-23: "#64748b"  # Slate
+  color-qualitative-24: "#0f766e"  # Deep teal
+
+  # Sequential (blue, light → dark)
+  color-sequential-1: "#eff6ff"
+  color-sequential-2: "#dbeafe"
+  color-sequential-3: "#bfdbfe"
+  color-sequential-4: "#93c5fd"
+  color-sequential-5: "#60a5fa"
+  color-sequential-6: "#3b82f6"
+  color-sequential-7: "#2563eb"
+  color-sequential-8: "#1d4ed8"
+  color-sequential-9: "#1e40af"
+
+  # Diverging (red ↔ blue, neutral gray midpoint)
+  color-diverging-1: "#b91c1c"     # Negative extreme
+  color-diverging-2: "#dc2626"
+  color-diverging-3: "#ef4444"
+  color-diverging-4: "#f97373"
+  color-diverging-5: "#fecaca"
+  color-diverging-6: "#e5e7eb"     # Neutral
+  color-diverging-7: "#bfdbfe"
+  color-diverging-8: "#93c5fd"
+  color-diverging-9: "#60a5fa"
+  color-diverging-10: "#2563eb"
+  color-diverging-11: "#1e3a8f"    # Positive extreme
+
+dark:
+  # Core brand colors
+  primary: "#60a5fa"      # Lighter blue for dark BG
+  secondary: "#38bdf8"    # Bright cyan
+
+  # Surfaces
+  background: "#020617"   # Very dark slate/blue
+  surface: "#020617"
+  card: "#0f172a"
+
+  # Qualitative (24 colors tuned for dark)
+  color-qualitative-1: "#60a5fa"   # Blue
+  color-qualitative-2: "#38bdf8"   # Cyan
+  color-qualitative-3: "#22c55e"   # Green
+  color-qualitative-4: "#fb923c"   # Orange
+  color-qualitative-5: "#a855f7"   # Purple
+  color-qualitative-6: "#f97373"   # Red soft
+  color-qualitative-7: "#4ade80"   # Emerald
+  color-qualitative-8: "#fbbf24"   # Amber
+  color-qualitative-9: "#818cf8"   # Indigo
+  color-qualitative-10: "#0ea5e9"  # Bright cyan
+  color-qualitative-11: "#c4b5fd"  # Lavender
+  color-qualitative-12: "#fb7185"  # Rose
+  color-qualitative-13: "#2dd4bf"  # Teal
+  color-qualitative-14: "#a3e635"  # Lime
+  color-qualitative-15: "#e11d48"  # Crimson
+  color-qualitative-16: "#6366f1"  # Indigo alt
+  color-qualitative-17: "#facc15"  # Yellow
+  color-qualitative-18: "#06b6d4"  # Cyan alt
+  color-qualitative-19: "#d946ef"  # Fuchsia
+  color-qualitative-20: "#22c55e"  # Green alt
+  color-qualitative-21: "#f97316"  # Orange alt
+  color-qualitative-22: "#5eead4"  # Teal soft
+  color-qualitative-23: "#94a3b8"  # Slate
+  color-qualitative-24: "#0f766e"  # Deep teal
+
+  # Sequential (blue, dark → light)
+  color-sequential-1: "#020617"
+  color-sequential-2: "#0b1120"
+  color-sequential-3: "#111827"
+  color-sequential-4: "#1e293b"
+  color-sequential-5: "#1d4ed8"
+  color-sequential-6: "#2563eb"
+  color-sequential-7: "#3b82f6"
+  color-sequential-8: "#60a5fa"
+  color-sequential-9: "#93c5fd"
+
+  # Diverging (orange ↔ blue for dark)
+  color-diverging-1: "#fb923c"     # Negative extreme
+  color-diverging-2: "#fdba74"
+  color-diverging-3: "#fed7aa"
+  color-diverging-4: "#ffedd5"
+  color-diverging-5: "#e5e7eb"
+  color-diverging-6: "#1e293b"     # Neutral slate
+  color-diverging-7: "#1d4ed8"
+  color-diverging-8: "#2563eb"
+  color-diverging-9: "#3b82f6"
+  color-diverging-10: "#60a5fa"
+  color-diverging-11: "#93c5fd"    # Positive extreme

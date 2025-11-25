@@ -1,0 +1,132 @@
+# MAPD Analytics Theme
+# Reference: https://docs.rilldata.com/reference/project-files/themes
+# Brand:
+#   Primary: #004890 (blue)
+#   Secondary / Accent: #FF9600 (orange)
+# Typography:
+#   Brand font: Arvo  (configure via global CSS; not controlled by theme.yaml)
+
+type: theme
+
+# Light mode colors
+light:
+  # Core brand colors
+  primary: "#004890"
+  secondary: "#FF9600"
+
+  # UI surfaces
+  background: "#f5f7fb"   # Soft blue-tinted background
+  surface: "#ffffff"      # Main surfaces
+  card: "#e5edf7"         # Slightly raised cards
+
+  # Qualitative palette (24 categorical colors)
+  color-qualitative-1: "#004890"   # Brand blue
+  color-qualitative-2: "#FF9600"   # Brand orange
+  color-qualitative-3: "#2563eb"   # Blue
+  color-qualitative-4: "#0ea5e9"   # Cyan
+  color-qualitative-5: "#22c55e"   # Green
+  color-qualitative-6: "#f97316"   # Orange alt
+  color-qualitative-7: "#6366f1"   # Indigo
+  color-qualitative-8: "#a855f7"   # Purple
+  color-qualitative-9: "#ef4444"   # Red
+  color-qualitative-10: "#14b8a6"  # Teal
+  color-qualitative-11: "#84cc16"  # Lime
+  color-qualitative-12: "#facc15"  # Yellow
+  color-qualitative-13: "#ec4899"  # Pink
+  color-qualitative-14: "#22c55e"  # Green alt
+  color-qualitative-15: "#38bdf8"  # Sky
+  color-qualitative-16: "#f59e0b"  # Amber
+  color-qualitative-17: "#0f766e"  # Deep teal
+  color-qualitative-18: "#9333ea"  # Violet
+  color-qualitative-19: "#fb7185"  # Rose
+  color-qualitative-20: "#4ade80"  # Green soft
+  color-qualitative-21: "#c4b5fd"  # Lavender
+  color-qualitative-22: "#94a3b8"  # Slate
+  color-qualitative-23: "#1d4ed8"  # Strong blue
+  color-qualitative-24: "#f97373"  # Soft red
+
+  # Sequential palette (brand-blue scale, light → dark)
+  color-sequential-1: "#e5edf7"
+  color-sequential-2: "#ccd9f0"
+  color-sequential-3: "#a3bee6"
+  color-sequential-4: "#7aa2dc"
+  color-sequential-5: "#4f82cf"
+  color-sequential-6: "#2563c3"
+  color-sequential-7: "#004890"
+  color-sequential-8: "#00356a"
+  color-sequential-9: "#002247"
+
+  # Diverging palette (red ↔ brand blue with neutral midpoint)
+  color-diverging-1: "#b91c1c"     # Negative extreme
+  color-diverging-2: "#ef4444"
+  color-diverging-3: "#f97373"
+  color-diverging-4: "#fecaca"
+  color-diverging-5: "#fee2e2"
+  color-diverging-6: "#e5e7eb"     # Neutral gray
+  color-diverging-7: "#d0e2ff"
+  color-diverging-8: "#9ec0ff"
+  color-diverging-9: "#4f82cf"
+  color-diverging-10: "#004890"
+  color-diverging-11: "#002247"    # Positive extreme
+
+# Dark mode colors
+dark:
+  # Core brand colors (brightened for dark background)
+  primary: "#4f82cf"      # Lighter brand blue
+  secondary: "#FFB347"    # Softer orange for dark mode
+
+  # UI surfaces
+  background: "#020b1d"   # Very dark navy
+  surface: "#030816"      # Main surface
+  card: "#0b1224"         # Cards
+
+  # Qualitative palette (24 categorical colors, tuned for contrast)
+  color-qualitative-1: "#4f82cf"   # Brand blue light
+  color-qualitative-2: "#FFB347"   # Brand orange light
+  color-qualitative-3: "#60a5fa"   # Blue
+  color-qualitative-4: "#38bdf8"   # Sky
+  color-qualitative-5: "#22c55e"   # Green
+  color-qualitative-6: "#fbbf24"   # Amber
+  color-qualitative-7: "#a855f7"   # Purple
+  color-qualitative-8: "#f472b6"   # Pink
+  color-qualitative-9: "#fb7185"   # Rose
+  color-qualitative-10: "#2dd4bf"  # Teal
+  color-qualitative-11: "#a3e635"  # Lime
+  color-qualitative-12: "#eab308"  # Yellow
+  color-qualitative-13: "#818cf8"  # Indigo
+  color-qualitative-14: "#0ea5e9"  # Cyan
+  color-qualitative-15: "#4ade80"  # Green soft
+  color-qualitative-16: "#f97316"  # Orange strong
+  color-qualitative-17: "#93c5fd"  # Light blue
+  color-qualitative-18: "#22c55e"  # Extra green
+  color-qualitative-19: "#c4b5fd"  # Lavender
+  color-qualitative-20: "#facc15"  # Yellow alt
+  color-qualitative-21: "#5eead4"  # Teal soft
+  color-qualitative-22: "#fb923c"  # Orange alt
+  color-qualitative-23: "#e5e7eb"  # Light slate
+  color-qualitative-24: "#FF9600"  # Brand orange strong
+
+  # Sequential palette (brand-blue scale, dark → mid-light)
+  # Kept mid/dark so bar labels remain readable on top.
+  color-sequential-1: "#020b1d"
+  color-sequential-2: "#02142e"
+  color-sequential-3: "#032041"
+  color-sequential-4: "#053160"
+  color-sequential-5: "#004890"
+  color-sequential-6: "#2563c3"
+  color-sequential-7: "#4f82cf"
+  color-sequential-8: "#7aa2dc"
+  color-sequential-9: "#a3bee6"
+
+  # Diverging palette (red ↔ brand blue for dark mode)
+  color-diverging-1: "#fb923c"     # Negative extreme (warm)
+  color-diverging-2: "#fdba74"
+  color-diverging-3: "#fed7aa"
+  color-diverging-4: "#fee2e2"
+  color-diverging-5: "#e5e7eb"
+  color-diverging-6: "#1e293b"     # Neutral slate
+  color-diverging-7: "#4f82cf"
+  color-diverging-8: "#2563c3"
+  color-diverging-9: "#1d4ed8"
+  color-diverging-10: "#004890"
+  color-diverging-11: "#002247"    # Positive extreme

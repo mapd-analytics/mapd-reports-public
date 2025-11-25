@@ -1,0 +1,39 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/canvas-dashboards
+
+type: canvas
+display_name: "Ads Performance Overview"
+defaults:
+  time_range: PT24H
+  comparison_mode: time
+rows:
+  - items:
+      - kpi_grid:
+          comparison:
+            - percent_change
+          hide_time_range: true
+          measures:
+            - total_impressions
+            - total_reach
+            - total_clicks
+            - total_video_views
+            - total_conversions
+            - total_conversion_value
+            - total_spend
+            - ctr
+            - video_view_rate
+            - conversion_rate
+            - conversion_rate_impression
+            - cpc
+            - cpm
+            - cpv
+            - cpa
+            - avg_conversion_value
+            - conversion_value_per_conversion
+            - revenue_per_click
+            - revenue_per_impression
+            - roas
+          metrics_view: ads_curated_electronics
+          sparkline: right
+          title: Ads Performance Overview
+        width: 12

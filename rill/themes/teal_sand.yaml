@@ -1,0 +1,127 @@
+# Theme YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/themes
+# "Teal Sand" theme – soft neutrals with teal & warm accent
+
+type: theme
+
+# Light mode colors
+light:
+  # Core brand colors
+  primary: "#0f766e"     # Deep teal for primary actions
+  secondary: "#f97316"   # Warm orange accent
+
+  # UI surface colors
+  background: "#f5f5f4"  # Warm light gray background
+  surface: "#ffffff"     # Main surfaces
+  card: "#e7e5e4"        # Slightly raised cards
+
+  # Qualitative palette (categorical data – 24 colors)
+  color-qualitative-1: "#0f766e"   # Teal
+  color-qualitative-2: "#0ea5e9"   # Sky blue
+  color-qualitative-3: "#f97316"   # Orange
+  color-qualitative-4: "#22c55e"   # Green
+  color-qualitative-5: "#6366f1"   # Indigo
+  color-qualitative-6: "#ec4899"   # Pink
+  color-qualitative-7: "#14b8a6"   # Teal light
+  color-qualitative-8: "#facc15"   # Yellow
+  color-qualitative-9: "#3b82f6"   # Blue
+  color-qualitative-10: "#a855f7"  # Purple
+  color-qualitative-11: "#f43f5e"  # Rose
+  color-qualitative-12: "#10b981"  # Emerald
+  color-qualitative-13: "#e11d48"  # Crimson
+  color-qualitative-14: "#22c55e"  # Green alt
+  color-qualitative-15: "#0ea5e9"  # Sky alt
+  color-qualitative-16: "#f97316"  # Orange alt
+  color-qualitative-17: "#6366f1"  # Indigo alt
+  color-qualitative-18: "#a855f7"  # Purple alt
+  color-qualitative-19: "#f59e0b"  # Amber
+  color-qualitative-20: "#06b6d4"  # Cyan
+  color-qualitative-21: "#4ade80"  # Green soft
+  color-qualitative-22: "#fb7185"  # Rose soft
+  color-qualitative-23: "#c4b5fd"  # Lavender
+  color-qualitative-24: "#64748b"  # Slate
+
+  # Sequential palette (light → dark, teal-based – 9 colors)
+  color-sequential-1: "#ecfdf5"
+  color-sequential-2: "#d1fae5"
+  color-sequential-3: "#a7f3d0"
+  color-sequential-4: "#6ee7b7"
+  color-sequential-5: "#34d399"
+  color-sequential-6: "#10b981"
+  color-sequential-7: "#059669"
+  color-sequential-8: "#047857"
+  color-sequential-9: "#065f46"
+
+  # Diverging palette (orange ↔ teal, with neutral midpoint – 11 colors)
+  color-diverging-1: "#b91c1c"    # Negative extreme (deep red)
+  color-diverging-2: "#ef4444"
+  color-diverging-3: "#f97373"
+  color-diverging-4: "#fecaca"
+  color-diverging-5: "#fee2e2"
+  color-diverging-6: "#e5e7eb"    # Neutral gray midpoint
+  color-diverging-7: "#ccfbf1"
+  color-diverging-8: "#5eead4"
+  color-diverging-9: "#14b8a6"
+  color-diverging-10: "#0f766e"
+  color-diverging-11: "#115e59"   # Positive extreme (deep teal)
+
+# Dark mode colors
+dark:
+  # Core brand colors (brighter for dark backgrounds)
+  primary: "#14b8a6"     # Bright teal
+  secondary: "#fb923c"   # Warm orange
+
+  # UI surface colors
+  background: "#020617"  # Very dark navy
+  surface: "#0b1120"     # Main surface
+  card: "#111827"        # Card background
+
+  # Qualitative palette (24 colors tuned for dark mode)
+  color-qualitative-1: "#14b8a6"   # Teal
+  color-qualitative-2: "#38bdf8"   # Sky
+  color-qualitative-3: "#fb923c"   # Orange
+  color-qualitative-4: "#22c55e"   # Green
+  color-qualitative-5: "#818cf8"   # Indigo
+  color-qualitative-6: "#f472b6"   # Pink
+  color-qualitative-7: "#2dd4bf"   # Teal light
+  color-qualitative-8: "#eab308"   # Yellow
+  color-qualitative-9: "#60a5fa"   # Blue
+  color-qualitative-10: "#c4b5fd"  # Lavender
+  color-qualitative-11: "#fb7185"  # Rose
+  color-qualitative-12: "#4ade80"  # Green soft
+  color-qualitative-13: "#f97316"  # Orange alt
+  color-qualitative-14: "#22c55e"  # Green alt
+  color-qualitative-15: "#38bdf8"  # Sky alt
+  color-qualitative-16: "#a855f7"  # Purple
+  color-qualitative-17: "#facc15"  # Yellow alt
+  color-qualitative-18: "#0ea5e9"  # Sky deep
+  color-qualitative-19: "#fbbf24"  # Amber
+  color-qualitative-20: "#06b6d4"  # Cyan
+  color-qualitative-21: "#d946ef"  # Fuchsia
+  color-qualitative-22: "#22c55e"  # Extra green
+  color-qualitative-23: "#f97373"  # Soft red
+  color-qualitative-24: "#94a3b8"  # Slate
+
+  # Sequential palette (dark → light, teal-based – 9 colors)
+  color-sequential-1: "#022c22"
+  color-sequential-2: "#064e3b"
+  color-sequential-3: "#065f46"
+  color-sequential-4: "#047857"
+  color-sequential-5: "#059669"
+  color-sequential-6: "#10b981"
+  color-sequential-7: "#34d399"
+  color-sequential-8: "#6ee7b7"
+  color-sequential-9: "#a7f3d0"
+
+  # Diverging palette (orange ↔ teal for dark mode – 11 colors)
+  color-diverging-1: "#f97316"    # Negative extreme (orange)
+  color-diverging-2: "#fdba74"
+  color-diverging-3: "#fed7aa"
+  color-diverging-4: "#ffedd5"
+  color-diverging-5: "#fef3c7"
+  color-diverging-6: "#475569"    # Neutral slate midpoint
+  color-diverging-7: "#0f766e"
+  color-diverging-8: "#14b8a6"
+  color-diverging-9: "#2dd4bf"
+  color-diverging-10: "#5eead4"
+  color-diverging-11: "#a5f3fc"   # Positive extreme (light teal)

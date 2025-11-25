@@ -1,0 +1,125 @@
+# Theme YAML
+# Reference: https://docs.rilldata.com/reference/project-files/themes
+# "Forest Night" – muted greens + warm neutrals
+
+type: theme
+
+light:
+  # Core brand colors
+  primary: "#166534"      # Deep forest green
+  secondary: "#ca8a04"    # Warm golden accent
+
+  # Surfaces
+  background: "#f5f5f4"   # Warm off-white
+  surface: "#ffffff"
+  card: "#e7e5e4"
+
+  # Qualitative palette (24 colors)
+  color-qualitative-1: "#166534"   # Forest
+  color-qualitative-2: "#22c55e"   # Green
+  color-qualitative-3: "#0ea5e9"   # Sky
+  color-qualitative-4: "#ca8a04"   # Gold
+  color-qualitative-5: "#7c2d12"   # Burnt umber
+  color-qualitative-6: "#be123c"   # Crimson
+  color-qualitative-7: "#15803d"   # Green alt
+  color-qualitative-8: "#22c55e"   # Emerald
+  color-qualitative-9: "#65a30d"   # Olive
+  color-qualitative-10: "#0f766e"  # Teal
+  color-qualitative-11: "#0284c7"  # Blue
+  color-qualitative-12: "#4f46e5"  # Indigo
+  color-qualitative-13: "#a855f7"  # Purple
+  color-qualitative-14: "#db2777"  # Pink
+  color-qualitative-15: "#16a34a"  # Green vivid
+  color-qualitative-16: "#36cfc9"  # Aqua
+  color-qualitative-17: "#d97706"  # Amber
+  color-qualitative-18: "#ea580c"  # Orange
+  color-qualitative-19: "#b91c1c"  # Red
+  color-qualitative-20: "#334155"  # Slate
+  color-qualitative-21: "#6d28d9"  # Deep violet
+  color-qualitative-22: "#0891b2"  # Cyan
+  color-qualitative-23: "#22c55e"  # Extra green
+  color-qualitative-24: "#0f172a"  # Deep navy
+
+  # Sequential palette (greens, light → dark)
+  color-sequential-1: "#ecfdf3"
+  color-sequential-2: "#dcfce7"
+  color-sequential-3: "#bbf7d0"
+  color-sequential-4: "#86efac"
+  color-sequential-5: "#4ade80"
+  color-sequential-6: "#22c55e"
+  color-sequential-7: "#16a34a"
+  color-sequential-8: "#15803d"
+  color-sequential-9: "#14532d"
+
+  # Diverging palette (red ↔ green with neutral midpoint)
+  color-diverging-1: "#b91c1c"     # Negative extreme
+  color-diverging-2: "#dc2626"
+  color-diverging-3: "#ef4444"
+  color-diverging-4: "#fca5a5"
+  color-diverging-5: "#fee2e2"
+  color-diverging-6: "#e5e7eb"     # Neutral gray
+  color-diverging-7: "#dcfce7"
+  color-diverging-8: "#bbf7d0"
+  color-diverging-9: "#4ade80"
+  color-diverging-10: "#22c55e"
+  color-diverging-11: "#166534"    # Positive extreme
+
+dark:
+  # Core brand colors
+  primary: "#22c55e"      # Bright green
+  secondary: "#facc15"    # Warm yellow accent
+
+  # Surfaces
+  background: "#020617"   # Deep navy
+  surface: "#020617"
+  card: "#0b1120"
+
+  # Qualitative palette (24 colors for dark)
+  color-qualitative-1: "#22c55e"   # Green
+  color-qualitative-2: "#4ade80"   # Green soft
+  color-qualitative-3: "#a3e635"   # Lime
+  color-qualitative-4: "#facc15"   # Yellow
+  color-qualitative-5: "#fb923c"   # Orange
+  color-qualitative-6: "#f97373"   # Soft red
+  color-qualitative-7: "#38bdf8"   # Sky
+  color-qualitative-8: "#0ea5e9"   # Cyan
+  color-qualitative-9: "#60a5fa"   # Blue
+  color-qualitative-10: "#818cf8"  # Indigo
+  color-qualitative-11: "#a855f7"  # Purple
+  color-qualitative-12: "#f472b6"  # Pink
+  color-qualitative-13: "#2dd4bf"  # Teal
+  color-qualitative-14: "#14b8a6"  # Teal deep
+  color-qualitative-15: "#22c55e"  # Green vivid
+  color-qualitative-16: "#84cc16"  # Lime alt
+  color-qualitative-17: "#eab308"  # Gold
+  color-qualitative-18: "#facc15"  # Yellow alt
+  color-qualitative-19: "#fb7185"  # Rose
+  color-qualitative-20: "#f97316"  # Orange alt
+  color-qualitative-21: "#c4b5fd"  # Lavender
+  color-qualitative-22: "#94a3b8"  # Slate
+  color-qualitative-23: "#64748b"  # Slate deep
+  color-qualitative-24: "#22c55e"  # Extra green
+
+  # Sequential palette (greens, dark → light)
+  color-sequential-1: "#022c22"
+  color-sequential-2: "#064e3b"
+  color-sequential-3: "#065f46"
+  color-sequential-4: "#047857"
+  color-sequential-5: "#059669"
+  color-sequential-6: "#16a34a"
+  color-sequential-7: "#22c55e"
+  color-sequential-8: "#4ade80"
+  color-sequential-9: "#bbf7d0"
+
+  # Diverging palette (orange ↔ green for dark)
+  color-diverging-1: "#fb923c"     # Negative extreme
+  color-diverging-2: "#fdba74"
+  color-diverging-3: "#fed7aa"
+  color-diverging-4: "#ffedd5"
+  color-diverging-5: "#fef3c7"
+  color-diverging-6: "#1e293b"     # Neutral slate
+  color-diverging-7: "#14532d"
+  color-diverging-8: "#166534"
+  color-diverging-9: "#22c55e"
+  color-diverging-10: "#4ade80"
+  color-diverging-11: "#bbf7d0"    # Positive extreme

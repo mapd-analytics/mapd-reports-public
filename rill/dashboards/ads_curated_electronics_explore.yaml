@@ -1,0 +1,49 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/explore-dashboards
+
+type: explore
+
+display_name: "Ads Performance - Electronics dashboard"
+metrics_view: ads_curated_electronics
+
+dimensions: '*'
+measures: '*'
+theme: mapd_analytics
+defaults:
+  measures:
+    - total_impressions
+    - total_reach
+    - total_clicks
+    - total_spend
+    - total_conversions
+    - total_conversion_value
+    - total_video_views
+    - ctr
+    - cpc
+    - cpm
+    - cpv
+    - video_view_rate
+    - conversion_rate
+    - conversion_rate_impression
+    - cpa
+    - avg_conversion_value
+    - revenue_per_click
+    - revenue_per_impression
+    - roas
+    - conversion_value_per_conversion
+  dimensions:
+    - platform
+    - platform_label
+    - account_id
+    - account_name
+    - campaign_id
+    - campaign_name
+    - ad_group_id
+    - ad_group_name
+    - ad_id
+    - ad_name
+    - device
+    - country
+    - placement
+  comparison_mode: time
+  time_range: 30D as of latest/D+1D

@@ -1,0 +1,235 @@
+version: 1
+type: metrics_view
+
+name: ads_curated_electronics
+display_name: "Ads Performance - Electronics"
+title: "Ads Performance - Electronics"
+description: "Multi-platform ads performance metrics for electronics campaigns, including delivery, cost, and revenue efficiency. All monetary values are in USD."
+
+model: ads_curated_electronics
+timeseries: date
+
+smallest_time_grain: day
+first_day_of_week: 1
+first_month_of_year: 1
+default_time_range: P90D
+
+dimensions:
+  - name: date
+    display_name: "Date"
+    description: "Date of the recorded ad performance."
+    column: date
+
+  - name: platform
+    display_name: "Platform"
+    description: "Advertising platform identifier (e.g. google_ads_search, google_ads_shopping)."
+    column: platform
+
+  - name: platform_label
+    display_name: "Platform Label"
+    description: "Human-readable label for the advertising platform."
+    column: platform_label
+
+  - name: account_id
+    display_name: "Account ID"
+    description: "Unique ID of the advertising account."
+    column: account_id
+
+  - name: account_name
+    display_name: "Account Name"
+    description: "Name of the advertising account."
+    column: account_name
+
+  - name: campaign_id
+    display_name: "Campaign ID"
+    description: "Unique ID of the ad campaign."
+    column: campaign_id
+
+  - name: campaign_name
+    display_name: "Campaign Name"
+    description: "Name of the ad campaign."
+    column: campaign_name
+
+  - name: ad_group_id
+    display_name: "Ad Group ID"
+    description: "Unique ID of the ad group."
+    column: ad_group_id
+
+  - name: ad_group_name
+    display_name: "Ad Group Name"
+    description: "Name of the ad group."
+    column: ad_group_name
+
+  - name: ad_id
+    display_name: "Ad ID"
+    description: "Unique ID of the creative or ad."
+    column: ad_id
+
+  - name: ad_name
+    display_name: "Ad Name"
+    description: "Name of the creative or ad."
+    column: ad_name
+
+  - name: device
+    display_name: "Device"
+    description: "Device category where the ad was served (e.g. mobile, desktop, tablet)."
+    column: device
+
+  - name: country
+    display_name: "Country"
+    description: "Country or market where the ad interaction occurred."
+    column: country
+
+  - name: placement
+    display_name: "Placement"
+    description: "Placement or inventory type where the ad appeared."
+    column: placement
+
+measures:
+  - name: total_impressions
+    display_name: "Impressions"
+    description: "Total number of impressions."
+    expression: SUM(impressions)
+    format_preset: humanize
+
+  - name: total_reach
+    display_name: "Reach"
+    description: "Total unique users reached."
+    expression: SUM(reach)
+    format_preset: humanize
+
+  - name: total_clicks
+    display_name: "Clicks"
+    description: "Total number of ad clicks."
+    expression: SUM(clicks)
+    format_preset: humanize
+
+  - name: total_spend
+    display_name: "Spend (USD)"
+    description: "Total advertising spend in USD."
+    expression: SUM(spend)
+    format_preset: currency_usd
+
+  - name: total_conversions
+    display_name: "Conversions"
+    description: "Total number of recorded conversions."
+    expression: SUM(conversions)
+    format_preset: humanize
+
+  - name: total_conversion_value
+    display_name: "Conversion Value (USD)"
+    description: "Total conversion value in USD."
+    expression: SUM(conversion_value)
+    format_preset: currency_usd
+
+  - name: total_video_views
+    display_name: "Video Views"
+    description: "Total number of video views."
+    expression: SUM(video_views)
+    format_preset: humanize
+
+  # Delivery & engagement efficiency
+  - name: ctr
+    display_name: "CTR"
+    description: "Click-through rate (clicks ÷ impressions)."
+    type: derived
+    requires: [total_clicks, total_impressions]
+    expression: CASE WHEN total_impressions = 0 THEN NULL ELSE total_clicks * 1.0 / total_impressions END
+    format_preset: percentage
+
+  - name: cpc
+    display_name: "CPC (USD)"
+    description: "Cost per click (USD)."
+    type: derived
+    requires: [total_spend, total_clicks]
+    expression: CASE WHEN total_clicks = 0 THEN NULL ELSE total_spend * 1.0 / total_clicks END
+    format_preset: currency_usd
+
+  - name: cpm
+    display_name: "CPM (USD)"
+    description: "Cost per 1,000 impressions (USD)."
+    type: derived
+    requires: [total_spend, total_impressions]
+    expression: CASE WHEN total_impressions = 0 THEN NULL ELSE total_spend * 1000.0 / total_impressions END
+    format_preset: currency_usd
+
+  - name: cpv
+    display_name: "CPV (USD)"
+    description: "Cost per video view (USD)."
+    type: derived
+    requires: [total_spend, total_video_views]
+    expression: CASE WHEN total_video_views = 0 THEN NULL ELSE total_spend * 1.0 / total_video_views END
+    format_preset: currency_usd
+
+  - name: video_view_rate
+    display_name: "Video View Rate"
+    description: "Ratio of video views to impressions."
+    type: derived
+    requires: [total_video_views, total_impressions]
+    expression: CASE WHEN total_impressions = 0 THEN NULL ELSE total_video_views * 1.0 / total_impressions END
+    format_preset: percentage
+
+  # Conversion efficiency
+  - name: conversion_rate
+    display_name: "Conversion Rate"
+    description: "Conversion rate based on clicks (conversions ÷ clicks)."
+    type: derived
+    requires: [total_conversions, total_clicks]
+    expression: CASE WHEN total_clicks = 0 THEN NULL ELSE total_conversions * 1.0 / total_clicks END
+    format_preset: percentage
+
+  - name: conversion_rate_impression
+    display_name: "Conv. Rate (Impressions)"
+    description: "Conversion rate based on impressions (conversions ÷ impressions)."
+    type: derived
+    requires: [total_conversions, total_impressions]
+    expression: CASE WHEN total_impressions = 0 THEN NULL ELSE total_conversions * 1.0 / total_impressions END
+    format_preset: percentage
+
+  - name: cpa
+    display_name: "CPA (USD)"
+    description: "Cost per acquisition (USD)."
+    type: derived
+    requires: [total_spend, total_conversions]
+    expression: CASE WHEN total_conversions = 0 THEN NULL ELSE total_spend * 1.0 / total_conversions END
+    format_preset: currency_usd
+
+  - name: avg_conversion_value
+    display_name: "Avg. Conversion Value (USD)"
+    description: "Average conversion value per conversion (USD)."
+    type: derived
+    requires: [total_conversion_value, total_conversions]
+    expression: CASE WHEN total_conversions = 0 THEN NULL ELSE total_conversion_value * 1.0 / total_conversions END
+    format_preset: currency_usd
+
+  - name: revenue_per_click
+    display_name: "Revenue per Click (USD)"
+    description: "Conversion value per click (USD)."
+    type: derived
+    requires: [total_conversion_value, total_clicks]
+    expression: CASE WHEN total_clicks = 0 THEN NULL ELSE total_conversion_value * 1.0 / total_clicks END
+    format_preset: currency_usd
+
+  - name: revenue_per_impression
+    display_name: "Revenue per Impression (USD)"
+    description: "Conversion value per impression (USD)."
+    type: derived
+    requires: [total_conversion_value, total_impressions]
+    expression: CASE WHEN total_impressions = 0 THEN NULL ELSE total_conversion_value * 1.0 / total_impressions END
+    format_preset: currency_usd
+
+  # Profitability & ROI
+  - name: roas
+    display_name: "ROAS"
+    description: "Return on ad spend (conversion value ÷ spend)."
+    type: derived
+    requires: [total_conversion_value, total_spend]
+    expression: CASE WHEN total_spend = 0 THEN NULL ELSE total_conversion_value * 1.0 / total_spend END
+
+  - name: conversion_value_per_conversion
+    display_name: "Conversion Value per Conversion (USD)"
+    description: "Average revenue per conversion (USD)."
+    type: derived
+    requires: [total_conversion_value, total_conversions]
+    expression: CASE WHEN total_conversions = 0 THEN NULL ELSE total_conversion_value * 1.0 / total_conversions END
+    format_preset: currency_usd
