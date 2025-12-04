@@ -1,0 +1,76 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/canvas-dashboards
+
+type: canvas
+display_name: "Ads - Electronics Shop - Custom 1"
+defaults:
+  time_range: PT24H
+  comparison_mode: time
+rows:
+  - items:
+      - kpi_grid:
+          comparison:
+            - delta
+            - percent_change
+          measures:
+            - total_clicks
+            - total_spend
+          metrics_view: ads_electronics_shop_metrics
+          sparkline: none
+        width: 3
+      - line_chart:
+          color:
+            colorMapping:
+              - value: Clicks
+                color: hsl(211deg 100% 28%)
+              - color: hsl(36deg 100% 50%)
+                value: Spend (USD)
+            field: rill_measures
+            legendOrientation: top
+            type: value
+          description: Clicks and Spend description here
+          metrics_view: ads_electronics_shop_metrics
+          show_description_as_tooltip: true
+          vl_config: null
+          x:
+            field: date
+            limit: 20
+            showAxisTitle: false
+            sort: -y
+            type: temporal
+          y:
+            field: total_conversions
+            type: quantitative
+            zeroBasedOrigin: true
+            fields:
+              - total_clicks
+              - total_spend
+        width: 9
+    height: 320px
+  - items:
+      - kpi_grid:
+          comparison:
+            - delta
+            - percent_change
+          measures:
+            - ctr
+            - cpa
+          metrics_view: ads_electronics_shop_metrics
+          sparkline: none
+        width: 3
+      - leaderboard:
+          dimensions:
+            - platform_label
+            - device
+            - account_name
+          measures:
+            - ctr
+            - cpa
+          metrics_view: ads_electronics_shop_metrics
+          num_rows: 5
+        width: 9
+    height: 370px
+theme:
+  light:
+    primary: hsl(211, 100%, 28%)
+    secondary: hsl(36, 100%, 50%)

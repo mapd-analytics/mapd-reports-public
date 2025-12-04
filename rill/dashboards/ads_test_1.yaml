@@ -1,0 +1,76 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/canvas-dashboards
+
+type: canvas
+display_name: "Canvas Dashboard"
+defaults:
+  time_range: PT24H
+  comparison_mode: time
+rows:
+  - items:
+      - kpi_grid:
+          comparison:
+            - delta
+            - percent_change
+          measures:
+            - total_clicks
+            - total_spend
+            - total_conversions
+            - ctr
+          metrics_view: ads_electronics_shop_metrics
+        width: 12
+    height: 40px
+  - items:
+      - line_chart:
+          color:
+            type: value
+            field: rill_measures
+            legendOrientation: top
+          metrics_view: ads_electronics_shop_metrics
+          x:
+            field: date
+            limit: 20
+            sort: -y
+            type: temporal
+          y:
+            field: conversion_rate
+            type: quantitative
+            zeroBasedOrigin: true
+            fields:
+              - conversion_rate
+              - ctr
+        width: 12
+    height: 40px
+  - items:
+      - pivot:
+          col_dimensions:
+            - device
+          measures:
+            - cpc
+            - cpa
+          metrics_view: ads_electronics_shop_metrics
+          row_dimensions:
+            - platform_label
+            - campaign_name
+          show_description_as_tooltip: true
+        width: 12
+    height: 40px
+  - items:
+      - heatmap:
+          color:
+            colorRange:
+              mode: scheme
+              scheme: tealblues
+            field: avg_conversion_value
+            type: quantitative
+          metrics_view: ads_electronics_shop_metrics
+          x:
+            field: date
+            limit: 40
+            type: temporal
+          y:
+            field: ad_name
+            limit: 40
+            type: nominal
+        width: 12
+    height: 40px
