@@ -4,7 +4,7 @@
 type: canvas
 display_name: "Ads - Electronics Shop - Custom 1"
 defaults:
-  time_range: PT24H
+  time_range: P30D
   comparison_mode: time
 rows:
   - items:
